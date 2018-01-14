@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_logo"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_location"
+        android:icon="@mipmap/ic_location_on_black_24dp"
+        android:title="Around Me" />
+
+    <item
+        android:id="@+id/navigation_shopping_cart"
+        android:icon="@mipmap/ic_shopping_cart_black_24dp"
+        android:title="My Cart" />
+
+    <item
+        android:id="@+id/navigation_user"
+        android:icon="@mipmap/ic_account_circle_black_24dp"
+        android:title="Profile"/>
+
+</menu>
