@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="#F0F0F0"
+    android:background="#FFF"
     tools:context="asia.blissbox.blissboxpteltd.ActivityViewProduct">
     <RelativeLayout
+        android:id="@+id/toolb"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:background="@drawable/toolbar_background"
         android:gravity="start|center_vertical"
-        android:id="@+id/toolb"
-        android:background="@color/cardview_shadow_start_color"
         android:orientation="horizontal">
         <ImageButton
-            android:layout_alignParentStart="true"
+            android:id="@+id/arrow_back"
             style="@style/Base.Widget.AppCompat.Button.Borderless"
             android:layout_width="40dp"
             android:layout_height="match_parent"
-            android:id="@+id/arrow_back"
+            android:layout_alignParentStart="true"
             android:src="@mipmap/ic_arrow_back_black_24dp"/>
 
         <TextView
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:id="@+id/viewProductTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:padding="15dp"
             android:textAlignment="center"
             android:textSize="20dp" />
@@ -37,85 +36,85 @@
 
 
     <ScrollView
-        android:layout_below="@id/toolb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/toolb"
         android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingHorizontal="10dp"
             android:layout_margin="10dp"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp">
 
             <ImageView
                 android:id="@+id/imgThumbnail"
-                android:scaleType="fitCenter"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
-                android:elevation="5dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginVertical="10dp" />
+                android:layout_marginVertical="10dp"
+                android:elevation="5dp"
+                android:scaleType="fitCenter" />
 
             <TextView
                 android:id="@+id/viewProductDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginHorizontal="10dp"/>
+                android:layout_marginHorizontal="10dp"
+                android:gravity="center" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SGD"
+                android:gravity="center"
                 android:paddingTop="15dp"
-                android:gravity="center"/>
+                android:text="SGD" />
 
             <TextView
                 android:id="@+id/viewProductPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textSize="25dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <RatingBar
+                    android:id="@+id/viewProductRatings"
+                    style="@style/Base.Widget.AppCompat.RatingBar.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:numStars="5"
                     android:layout_marginRight="5dp"
-                    style="@style/Base.Widget.AppCompat.RatingBar.Small"
-                    android:id="@+id/viewProductRatings"
+                    android:numStars="5"
                     android:stepSize="1.0"/>
 
                 <TextView
+                    android:id="@+id/viewProductReviews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/viewProductReviews"
-                    android:textSize="15dp"
-                    android:layout_marginLeft="5dp" />
+                    android:layout_marginLeft="5dp"
+                    android:textSize="15dp" />
 
             </LinearLayout>
 
             <Button
+                android:id="@+id/addToCart"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                style="@style/Base.Widget.AppCompat.Button.Borderless"
-                android:textColor="#fff"
-                android:textSize="20dp"
                 android:layout_marginHorizontal="20dp"
-                android:id="@+id/addToCart"
+                android:background="@drawable/button_rough_edge"
                 android:text="Add To Cart"
-                android:background="@drawable/button_rough_edge"/>
+                android:textColor="#fff"
+                android:textSize="20dp" />
 
             <Button
                 android:id="@+id/exploreBoxNonCart"

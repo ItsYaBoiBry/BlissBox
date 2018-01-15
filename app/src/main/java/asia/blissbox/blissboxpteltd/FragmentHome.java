@@ -1,26 +1,18 @@
 package asia.blissbox.blissboxpteltd;
 
 
-import android.animation.ObjectAnimator;
 import android.content.Intent;
-import android.content.res.Resources;
-import android.media.Image;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.squareup.okhttp.OkHttpClient;
@@ -29,7 +21,6 @@ import com.squareup.picasso.Picasso;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -67,45 +58,45 @@ public class FragmentHome extends Fragment {
         String url = "https://dev.blissbox.asia/api/giftbox/all";
 
         GetGifts getGifts = new GetGifts();
-        getGifts.execute(new String[]{url});
+        getGifts.execute(url);
 
-        pbHome = (LinearLayout) view.findViewById(R.id.loadingScreen);
+        pbHome = view.findViewById(R.id.loadingScreen);
 
-        featureBox1 = (LinearLayout) view.findViewById(R.id.featureBox1);
-        featureBox2 = (LinearLayout) view.findViewById(R.id.featureBox2);
-        featureBox3 = (LinearLayout) view.findViewById(R.id.featureBox3);
-        featureBox4 = (LinearLayout) view.findViewById(R.id.featureBox4);
-        featureBox5 = (LinearLayout) view.findViewById(R.id.featureBox5);
+        featureBox1 = view.findViewById(R.id.featureBox1);
+        featureBox2 = view.findViewById(R.id.featureBox2);
+        featureBox3 = view.findViewById(R.id.featureBox3);
+        featureBox4 = view.findViewById(R.id.featureBox4);
+        featureBox5 = view.findViewById(R.id.featureBox5);
 
-        featureTitle1 = (TextView) view.findViewById(R.id.featureBoxOneTitle);
-        featureTitle2 = (TextView) view.findViewById(R.id.featureBoxTwoTitle);
-        featureTitle3 = (TextView) view.findViewById(R.id.featureBoxThreeTitle);
-        featureTitle4 = (TextView) view.findViewById(R.id.featureBoxFourTitle);
-        featureTitle5 = (TextView) view.findViewById(R.id.featureBoxFiveTitle);
+        featureTitle1 = view.findViewById(R.id.featureBoxOneTitle);
+        featureTitle2 = view.findViewById(R.id.featureBoxTwoTitle);
+        featureTitle3 = view.findViewById(R.id.featureBoxThreeTitle);
+        featureTitle4 = view.findViewById(R.id.featureBoxFourTitle);
+        featureTitle5 = view.findViewById(R.id.featureBoxFiveTitle);
 
-        featurePrice1 = (TextView) view.findViewById(R.id.featureboxOnePrice);
-        featurePrice2 = (TextView) view.findViewById(R.id.featureboxTwoPrice);
-        featurePrice3 = (TextView) view.findViewById(R.id.featureboxThreePrice);
-        featurePrice4 = (TextView) view.findViewById(R.id.featureboxFourPrice);
-        featurePrice5 = (TextView) view.findViewById(R.id.featureboxFivePrice);
+        featurePrice1 = view.findViewById(R.id.featureboxOnePrice);
+        featurePrice2 = view.findViewById(R.id.featureboxTwoPrice);
+        featurePrice3 = view.findViewById(R.id.featureboxThreePrice);
+        featurePrice4 = view.findViewById(R.id.featureboxFourPrice);
+        featurePrice5 = view.findViewById(R.id.featureboxFivePrice);
 
-        featureDesc1 = (TextView) view.findViewById(R.id.featureBoxOneDesc);
-        featureDesc2 = (TextView) view.findViewById(R.id.featureBoxTwoDesc);
-        featureDesc3 = (TextView) view.findViewById(R.id.featureboxThreeDesc);
-        featureDesc4 = (TextView) view.findViewById(R.id.featureboxFourDesc);
-        featureDesc5 = (TextView) view.findViewById(R.id.featureboxFiveDesc);
+        featureDesc1 = view.findViewById(R.id.featureBoxOneDesc);
+        featureDesc2 = view.findViewById(R.id.featureBoxTwoDesc);
+        featureDesc3 = view.findViewById(R.id.featureboxThreeDesc);
+        featureDesc4 = view.findViewById(R.id.featureboxFourDesc);
+        featureDesc5 = view.findViewById(R.id.featureboxFiveDesc);
 
-        ivFeature1 = (ImageView) view.findViewById(R.id.ivFeatureOne);
-        ivFeature2 = (ImageView) view.findViewById(R.id.ivFeatureTwo);
-        ivFeature3 = (ImageView) view.findViewById(R.id.ivFeaturethree);
-        ivFeature4 = (ImageView) view.findViewById(R.id.ivFeatureFour);
-        ivFeature5 = (ImageView) view.findViewById(R.id.ivFeatureFive);
+        ivFeature1 = view.findViewById(R.id.ivFeatureOne);
+        ivFeature2 = view.findViewById(R.id.ivFeatureTwo);
+        ivFeature3 = view.findViewById(R.id.ivFeaturethree);
+        ivFeature4 = view.findViewById(R.id.ivFeatureFour);
+        ivFeature5 = view.findViewById(R.id.ivFeatureFive);
 
-        btnGastro = (ImageButton) view.findViewById(R.id.gastroButton);
-        btnEnergize = (ImageButton) view.findViewById(R.id.energizeButton);
-        btnWellness = (ImageButton) view.findViewById(R.id.wellnessButton);
-        btnStay = (ImageButton) view.findViewById(R.id.stayButton);
-        btnMulti = (ImageButton) view.findViewById(R.id.multiButton);
+        btnGastro = view.findViewById(R.id.gastroButton);
+        btnEnergize = view.findViewById(R.id.energizeButton);
+        btnWellness = view.findViewById(R.id.wellnessButton);
+        btnStay = view.findViewById(R.id.stayButton);
+        btnMulti = view.findViewById(R.id.multiButton);
 
         btnGastro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -172,6 +163,13 @@ public class FragmentHome extends Fragment {
         return view;
     }
 
+    public void replaceFragment(Fragment someFragment) {
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragment, someFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
     private class GetGifts extends AsyncTask<String, Void, String> {
 
         @Override
@@ -198,7 +196,6 @@ public class FragmentHome extends Fragment {
             }
             return null;
         }
-
 
         @Override
         protected void onPostExecute(String result) {
@@ -313,12 +310,6 @@ public class FragmentHome extends Fragment {
                 }
             });
         }
-    }
-    public void replaceFragment(Fragment someFragment) {
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragment, someFragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
     }
 
 

@@ -2,10 +2,8 @@ package asia.blissbox.blissboxpteltd;
 
 import android.content.Context;
 import android.content.Intent;
-import android.provider.ContactsContract;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -14,8 +12,6 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
-
-import java.io.Serializable;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -32,7 +28,7 @@ public class ActivityViewProduct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_product);
 
-        btnBack = (ImageButton) findViewById(R.id.arrow_back);
+        btnBack = findViewById(R.id.arrow_back);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,17 +42,17 @@ public class ActivityViewProduct extends AppCompatActivity {
                 .build()
         );
 
-        tvTitle = (TextView) findViewById(R.id.viewProductTitle);
-        tvDescription = (TextView) findViewById(R.id.viewProductDescription);
-        tvPrice = (TextView) findViewById(R.id.viewProductPrice);
-        btnAddToCart = (Button) findViewById(R.id.addToCart);
-        btnExplore = (Button) findViewById(R.id.exploreBoxNonCart);
-        ivThumbnail = (ImageView) findViewById(R.id.imgThumbnail);
-        TextView tvReview = (TextView) findViewById(R.id.viewProductReviews);
-        RatingBar rbReview = (RatingBar) findViewById(R.id.viewProductRatings);
+        tvTitle = findViewById(R.id.viewProductTitle);
+        tvDescription = findViewById(R.id.viewProductDescription);
+        tvPrice = findViewById(R.id.viewProductPrice);
+        btnAddToCart = findViewById(R.id.addToCart);
+        btnExplore = findViewById(R.id.exploreBoxNonCart);
+        ivThumbnail = findViewById(R.id.imgThumbnail);
+        TextView tvReview = findViewById(R.id.viewProductReviews);
+        RatingBar rbReview = findViewById(R.id.viewProductRatings);
 
         Intent getIntent = getIntent();
-        ObjectBoxes boxes = (ObjectBoxes) getIntent.getSerializableExtra("gift");
+        final ObjectBoxes boxes = (ObjectBoxes) getIntent.getSerializableExtra("gift");
 
 //        final ObjectBoxes box = (ObjectBoxes) getIntent.getSerializableExtra("addBoxToCart");
 
@@ -84,8 +80,8 @@ public class ActivityViewProduct extends AppCompatActivity {
         btnAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                DBHelper dbHelper = new DBHelper(ActivityViewProduct.this);
-//                dbHelper.insertIntoCart(box);
+                DBHelper dbHelper = new DBHelper(ActivityViewProduct.this);
+                dbHelper.insertIntoCart(boxes);
                 finish();
             }
         });

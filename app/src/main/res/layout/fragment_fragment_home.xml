@@ -25,9 +25,10 @@
                 <LinearLayout
                     android:id="@+id/tool"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:layout_alignParentTop="true"
-                    android:background="@color/grey"
+                    android:background="@drawable/toolbar_background"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <ImageButton
@@ -238,7 +239,6 @@
                                     android:layout_marginRight="15dp"
                                     android:layout_marginTop="5dp"
                                     android:background="@color/cardview_shadow_start_color" />
-
 
                                 <TextView
                                     android:id="@+id/featureboxOnePrice"
