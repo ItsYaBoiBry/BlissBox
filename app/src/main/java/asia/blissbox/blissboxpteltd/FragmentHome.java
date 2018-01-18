@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -38,6 +39,7 @@ public class FragmentHome extends Fragment {
     TextView featurePrice1, featurePrice2, featurePrice3, featurePrice4, featurePrice5;
     TextView featureDesc1, featureDesc2, featureDesc3, featureDesc4, featureDesc5;
     ObjectBoxes feature1, feature2, feature3, feature4, feature5;
+    Button buyBtn1, buyBtn2, buyBtn3, buyBtn4, buyBtn5;
     LinearLayout pbHome;
 
     private List<ObjectBoxes> allBoxes;
@@ -97,6 +99,14 @@ public class FragmentHome extends Fragment {
         btnWellness = view.findViewById(R.id.wellnessButton);
         btnStay = view.findViewById(R.id.stayButton);
         btnMulti = view.findViewById(R.id.multiButton);
+
+        buyBtn1 = view.findViewById(R.id.buyNow1);
+        buyBtn2 = view.findViewById(R.id.buyNow2);
+        buyBtn3 = view.findViewById(R.id.buyNow3);
+        buyBtn4 = view.findViewById(R.id.buyNow4);
+        buyBtn5 = view.findViewById(R.id.buyNow5);
+
+
 
         btnGastro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,6 +172,7 @@ public class FragmentHome extends Fragment {
 
         return view;
     }
+
 
     public void replaceFragment(Fragment someFragment) {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
@@ -257,6 +268,15 @@ public class FragmentHome extends Fragment {
                     startActivity(intent);
                 }
             });
+            buyBtn1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DBHelper dbHelper = new DBHelper(getContext());
+                    dbHelper.insertIntoCart(feature1);
+                    Fragment fragment = new FragmentCart();
+                    replaceFragment(fragment);
+                }
+            });
 
             featureTitle2.setText(feature2.getName());
             featureDesc2.setText(feature2.getDescription());
@@ -268,6 +288,15 @@ public class FragmentHome extends Fragment {
                     Intent intent = new Intent(getContext(), ActivityViewProduct.class);
                     intent.putExtra("gift",feature2);
                     startActivity(intent);
+                }
+            });
+            buyBtn2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DBHelper dbHelper = new DBHelper(getContext());
+                    dbHelper.insertIntoCart(feature2);
+                    Fragment fragment = new FragmentCart();
+                    replaceFragment(fragment);
                 }
             });
 
@@ -283,6 +312,15 @@ public class FragmentHome extends Fragment {
                     startActivity(intent);
                 }
             });
+            buyBtn3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DBHelper dbHelper = new DBHelper(getContext());
+                    dbHelper.insertIntoCart(feature3);
+                    Fragment fragment = new FragmentCart();
+                    replaceFragment(fragment);
+                }
+            });
 
             featureTitle4.setText(feature4.getName());
             featureDesc4.setText(feature4.getDescription());
@@ -294,6 +332,15 @@ public class FragmentHome extends Fragment {
                     Intent intent = new Intent(getContext(), ActivityViewProduct.class);
                     intent.putExtra("gift",feature4);
                     startActivity(intent);
+                }
+            });
+            buyBtn3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DBHelper dbHelper = new DBHelper(getContext());
+                    dbHelper.insertIntoCart(feature3);
+                    Fragment fragment = new FragmentCart();
+                    replaceFragment(fragment);
                 }
             });
 
@@ -309,8 +356,16 @@ public class FragmentHome extends Fragment {
                     startActivity(intent);
                 }
             });
+            buyBtn5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DBHelper dbHelper = new DBHelper(getContext());
+                    dbHelper.insertIntoCart(feature5);
+                    Fragment fragment = new FragmentCart();
+                    replaceFragment(fragment);
+                }
+            });
         }
     }
-
 
 }

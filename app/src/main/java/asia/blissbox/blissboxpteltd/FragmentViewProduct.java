@@ -2,7 +2,6 @@ package asia.blissbox.blissboxpteltd;
 
 
 import android.content.res.Resources;
-import android.media.Image;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -24,7 +23,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,10 +33,6 @@ import java.util.List;
  */
 public class FragmentViewProduct extends Fragment {
     private static final String TAG = "ViewProduct";
-    private RecyclerView recyclerView;
-    private AdapterBoxes adapter;
-    private List<ObjectBoxes> boxesList;
-    private List<ObjectBoxes> allBoxes;
     LinearLayout ll;
     GridLayoutManager gridLayoutManager;
     int universe_id;
@@ -46,6 +40,10 @@ public class FragmentViewProduct extends Fragment {
     TextView title;
     LinearLayout pbHome;
     ImageButton btnback;
+    private RecyclerView recyclerView;
+    private AdapterBoxes adapter;
+    private List<ObjectBoxes> boxesList;
+    private List<ObjectBoxes> allBoxes;
 
 
     public FragmentViewProduct() {
@@ -60,18 +58,18 @@ public class FragmentViewProduct extends Fragment {
         universe_id = getArguments().getInt("universe_id");
         getTitle = getArguments().getString("universe");
 
-        pbHome = (LinearLayout) view.findViewById(R.id.loadingScreen);
+        pbHome = view.findViewById(R.id.loadingScreen);
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        recyclerView = view.findViewById(R.id.recycler_view);
         boxesList = new ArrayList<>();
         gridLayoutManager = new GridLayoutManager(getContext(), 2);
         adapter = new AdapterBoxes(getContext(), boxesList);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setAdapter(adapter);
-        ll = (LinearLayout) view.findViewById(R.id.viewProductsFragment);
-        title = (TextView) view.findViewById(R.id.viewProductTitle);
+        ll = view.findViewById(R.id.viewProductsFragment);
+        title = view.findViewById(R.id.viewProductTitle);
         title.setText(getTitle);
-        btnback = (ImageButton)  view.findViewById(R.id.arrow_back);
+        btnback = view.findViewById(R.id.arrow_back);
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,10 +78,9 @@ public class FragmentViewProduct extends Fragment {
         });
 
 
-
         String url = "https://dev.blissbox.asia/api/giftbox/all";
         GetGifts getGifts = new GetGifts();
-        getGifts.execute(new String[]{url});
+        getGifts.execute(url);
 
         return view;
     }
