@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/toolb"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="56.0dip"
         android:background="@drawable/toolbar_background"
         android:gravity="start|center_vertical"
         android:orientation="horizontal">

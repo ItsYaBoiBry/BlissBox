@@ -13,7 +13,7 @@
         <LinearLayout
             android:id="@+id/tool"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="56.0dip"
             android:background="@drawable/toolbar_background"
             android:gravity="center"
             android:orientation="horizontal">

@@ -258,7 +258,7 @@ public class FragmentHome extends Fragment {
 
             featureTitle1.setText(feature1.getName());
             featureDesc1.setText(feature1.getDescription());
-            featurePrice1.setText("SGD "+String.valueOf(feature1.getPrice()));
+            featurePrice1.setText("SGD " + String.valueOf(feature1.getPrice()) + "0");
             Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/"+feature1.getThumbnail()).into(ivFeature1);
             featureBox1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -280,7 +280,7 @@ public class FragmentHome extends Fragment {
 
             featureTitle2.setText(feature2.getName());
             featureDesc2.setText(feature2.getDescription());
-            featurePrice2.setText("SGD "+String.valueOf(feature2.getPrice()));
+            featurePrice2.setText("SGD " + String.valueOf(feature2.getPrice()) + "0");
             Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/"+feature2.getThumbnail()).into(ivFeature2);
             featureBox2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -302,7 +302,7 @@ public class FragmentHome extends Fragment {
 
             featureTitle3.setText(feature3.getName());
             featureDesc3.setText(feature3.getDescription());
-            featurePrice3.setText("SGD "+String.valueOf(feature3.getPrice()));
+            featurePrice3.setText("SGD " + String.valueOf(feature3.getPrice()) + "0");
             Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/"+feature3.getThumbnail()).into(ivFeature3);
             featureBox3.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -324,7 +324,7 @@ public class FragmentHome extends Fragment {
 
             featureTitle4.setText(feature4.getName());
             featureDesc4.setText(feature4.getDescription());
-            featurePrice4.setText("SGD "+String.valueOf(feature4.getPrice()));
+            featurePrice4.setText("SGD " + String.valueOf(feature4.getPrice()) + "0");
             Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/"+feature4.getThumbnail()).into(ivFeature4);
             featureBox4.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -346,7 +346,7 @@ public class FragmentHome extends Fragment {
 
             featureTitle5.setText(feature5.getName());
             featureDesc5.setText(feature5.getDescription());
-            featurePrice5.setText("SGD "+String.valueOf(feature5.getPrice()));
+            featurePrice5.setText("SGD " + String.valueOf(feature5.getPrice()) + "0");
             Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/"+feature5.getThumbnail()).into(ivFeature5);
             featureBox5.setOnClickListener(new View.OnClickListener() {
                 @Override

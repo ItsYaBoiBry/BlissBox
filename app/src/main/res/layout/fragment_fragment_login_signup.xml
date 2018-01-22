@@ -1,97 +1,129 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
     tools:context="asia.blissbox.blissboxpteltd.FragmentLoginSignup">
 
-    <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="190dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/blissbox_big_logo" />
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
 
+            <ImageView
+                android:layout_width="190dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/blissbox_big_logo" />
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/etEmail"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Email"
-                android:inputType="textEmailAddress" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <android.support.design.widget.TextInputEditText
-                android:id="@+id/etPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Password"
-                android:inputType="textPassword" />
+                <TextView
+                    android:id="@+id/errorMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#FF0000" />
 
-            <android.support.v7.widget.AppCompatButton
-                android:id="@+id/blissboxLogin"
-                style="@style/Base.Widget.AppCompat.Button.Borderless"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/button_round_yellow"
-                android:text="Login"
-                android:textColor="#fff"
-                android:textSize="20sp" />
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:text="Or"
-                android:textAlignment="center"
-                android:textSize="25dp" />
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/blissboxLogin"
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_round_yellow"
+                    android:text="Login"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Or"
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
 
 
-            <!--<Button-->
-            <!---->
-            <!--android:paddingLeft="10dp"-->
-            <!--android:paddingRight="10dp"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="50dp"-->
-            <!--android:text="Sign in"-->
-            <!--android:textColor="#fff"-->
-            <!--android:elevation="5dp"-->
-            <!--android:drawableLeft="@drawable/facebook_logo"-->
-            <!--android:background="@drawable/fb_login_background"/>-->
+                <!--<Button-->
+                <!---->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:text="Sign in"-->
+                <!--android:textColor="#fff"-->
+                <!--android:elevation="5dp"-->
+                <!--android:drawableLeft="@drawable/facebook_logo"-->
+                <!--android:background="@drawable/fb_login_background"/>-->
 
-            <com.facebook.login.widget.LoginButton
-                android:id="@+id/fbLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/logo"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center_horizontal"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp" />
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/fbLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp" />
 
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/gLogin"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="10dp" />
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/gLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/loadingScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="#99F0F0F0"
+            android:gravity="center">
+
+            <com.wang.avi.AVLoadingIndicatorView
+                style="@style/AVLoadingIndicatorView.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:indicatorColor="@color/yellow"
+                app:indicatorName="PacmanIndicator" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
 
 </FrameLayout>

@@ -136,13 +136,11 @@ public class FragmentViewProduct extends Fragment {
                     Log.e("giftBox_Add", "Giftbox_name " + String.valueOf(box.getString("name") + " Added"));
                     bocs.setUniverseId(box.getInt("universe_id"));
                     Log.e("giftBox_Add", "Giftbox_universe_id " + String.valueOf(box.getInt("universe_id") + " Added"));
-                    bocs.setThumbnail(box.getString(
-
-                            "thumbnail"));
+                    bocs.setThumbnail(box.getString("thumbnail"));
                     Log.e("giftBox_Add", "Giftbox_thumbnail " + String.valueOf(box.getString("thumbnail") + " Added"));
                     bocs.setInitial(box.getString("initial"));
                     Log.e("GiftBox_Add", "Giftbox_initial " + String.valueOf(box.getString("initial") + " Added"));
-                    bocs.setPrice((box.getInt("price")/10));
+                    bocs.setPrice((box.getInt("price")));
                     Log.e("GiftBox_Add", "Giftbox_price " + String.valueOf(box.getInt("price") + " Added"));
                     bocs.setDescription(box.getString("description"));
                     Log.e("GiftBox_Add", "Giftbox_Description " + String.valueOf(box.getString("description") + " Added"));

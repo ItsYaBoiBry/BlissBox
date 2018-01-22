@@ -1,7 +1,6 @@
 package asia.blissbox.blissboxpteltd;
 
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -23,7 +22,7 @@ public class FragmentCart extends Fragment {
     ListView lvCart;
     ArrayAdapter aa;
     ArrayList<ObjectBoxes> boxes;
-    Button btnPayment;
+    ImageButton btnPayment;
     double totalPrice = 0;
     LinearLayout linearLayout;
 
@@ -42,26 +41,18 @@ public class FragmentCart extends Fragment {
         lvCart = view.findViewById(R.id.lvCartItems);
         DBHelper dbHelper = new DBHelper(getContext());
         btnPayment = view.findViewById(R.id.proceedToPayment);
-        btnPayment.setTextColor(Color.WHITE);
+
         boxes = dbHelper.getCartData();
         aa = new AdapterCartListView(getContext(), R.layout.custom_cart_list, boxes);
         lvCart.setAdapter(aa);
-
-        if (boxes.isEmpty()) {
-            btnPayment.setText("Cart is Empty");
-        } else {
-            for (int i = 0; i < boxes.size(); i++) {
-                totalPrice = totalPrice + boxes.get(i).getPrice();
-            }
-            btnPayment.setText("Total Price: SGD" + totalPrice + "0" + "\nProceed to Payment");
-        }
 
         lvCart.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
 //                Intent intent = new Intent(getContext(), ActivityViewCartProduct.class);
 //                intent.putExtra("box", boxes.get(position));
-//                startActivity(intent);
+//                startActivity(intent);    '
+
             }
         });
 

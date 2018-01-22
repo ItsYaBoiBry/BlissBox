@@ -15,7 +15,7 @@ public class ObjectBoxes implements Serializable {
     private String initial;
     private String thumbnail;
     private String name;
-    private float price;
+    private double price;
     private String description;
     private String pdf_url;
     private int review;
@@ -32,7 +32,7 @@ public class ObjectBoxes implements Serializable {
                        String initial,
                        String thumbnail,
                        String name,
-                       float price,
+                       double price,
                        String description,
                        String pdf_url,
                        int review,
@@ -45,7 +45,7 @@ public class ObjectBoxes implements Serializable {
         this.initial = initial;
         this.thumbnail = thumbnail;
         this.name = name;
-        this.price = price;
+        this.price = price / 100;
         this.description = description;
         this.pdf_url = pdf_url;
         this.review = review;
@@ -112,12 +112,12 @@ public class ObjectBoxes implements Serializable {
         this.name = name;
     }
 
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
-        this.price = price;
+    public void setPrice(double price) {
+        this.price = price / 100;
     }
 
     public String getDescription() {

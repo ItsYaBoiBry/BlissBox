@@ -37,7 +37,7 @@ public class AdapterCartListView extends ArrayAdapter<ObjectBoxes> {
         ivThumbnail = rowView.findViewById(R.id.cartThumbnail);
         Picasso.with(context).load("https://dev.blissbox.asia/storage/giftboxes/" + boxes.get(position).getThumbnail()).into(ivThumbnail);
         tvName.setText(boxes.get(position).getName());
-        tvPrice.setText(String.valueOf(boxes.get(position).getPrice()));
+        tvPrice.setText(String.valueOf(boxes.get(position).getPrice()) + "0");
 
         return rowView;
     }

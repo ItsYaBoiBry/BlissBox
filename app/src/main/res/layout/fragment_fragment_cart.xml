@@ -11,14 +11,13 @@
         android:background="#FFF"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/tool"
+        <RelativeLayout
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="56.0dip"
             android:layout_alignParentTop="true"
             android:background="@drawable/toolbar_background"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:gravity="center">
 
             <TextView
                 android:layout_width="match_parent"
@@ -27,39 +26,31 @@
                 android:textAlignment="center"
                 android:textSize="30sp" />
 
-        </LinearLayout>
+            <ImageButton
+                android:id="@+id/proceedToPayment"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/ic_payment_black_24dp" />
 
-        <ScrollView
+        </RelativeLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/tool"
-            android:fillViewport="true"
-            android:scrollbars="none">
+            android:layout_below="@id/toolbar"
+            android:orientation="vertical">
 
-            <RelativeLayout
+            <ListView
+                android:id="@+id/lvCartItems"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:divider="@android:color/transparent" />
 
-                <ListView
-                    android:id="@+id/lvCartItems"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentTop="true"
-                    android:divider="@android:color/transparent" />
+        </LinearLayout>
 
-            </RelativeLayout>
-        </ScrollView>
-
-        <Button
-            android:id="@+id/proceedToPayment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="10dp"
-            android:layout_marginHorizontal="10dp"
-            android:background="@drawable/button_rounder_yellow" />
 
     </RelativeLayout>
-
 </FrameLayout>
