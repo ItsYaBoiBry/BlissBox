@@ -57,11 +57,21 @@
                     style="@style/Base.Widget.AppCompat.Button.Borderless"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
+                    android:layout_margin="5dp"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/button_round_yellow"
+                    android:elevation="5dp"
                     android:text="Login"
                     android:textColor="#fff"
                     android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Forget Password?"
+                    android:textAlignment="center"
+                    android:textSize="15sp" />
+
 
                 <TextView
                     android:layout_width="match_parent"
@@ -71,7 +81,6 @@
                     android:text="Or"
                     android:textAlignment="center"
                     android:textSize="25dp" />
-
 
                 <!--<Button-->
                 <!---->
@@ -84,21 +93,57 @@
                 <!--android:elevation="5dp"-->
                 <!--android:drawableLeft="@drawable/facebook_logo"-->
                 <!--android:background="@drawable/fb_login_background"/>-->
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/blissboxRegistration"
+                    style="@style/Base.Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_round_yellow"
+                    android:elevation="5dp"
+                    android:text="Register"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
 
-                <com.facebook.login.widget.LoginButton
-                    android:id="@+id/fbLogin"
+                <FrameLayout
+                    android:id="@+id/FrameLayout1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/logo"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center_horizontal"
-                    android:paddingBottom="10dp"
-                    android:paddingTop="10dp" />
+                    android:layout_gravity="center">
+
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/fbLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/logo"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="5dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp" />
+
+                    <Button
+                        android:id="@+id/customfbLogin"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/fb_login_background"
+                        android:drawableStart="@drawable/facebook_logo"
+                        android:elevation="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:text="Login with Facebook"
+                        android:textColor="#fff" />
+
+                </FrameLayout>
 
                 <com.google.android.gms.common.SignInButton
                     android:id="@+id/gLogin"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
                     android:layout_marginTop="10dp" />
 
             </LinearLayout>

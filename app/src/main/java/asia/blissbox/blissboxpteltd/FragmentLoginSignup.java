@@ -46,6 +46,7 @@ public class FragmentLoginSignup extends Fragment {
     TextInputEditText email, password;
     Button login;
     SignInButton gLogin;
+    Button fbCustomLogin;
     LoginButton fbLogin;
     TextView errorMessage;
     SharedPreferences sharedPreferences;
@@ -76,6 +77,14 @@ public class FragmentLoginSignup extends Fragment {
         fbLogin = view.findViewById(R.id.fbLogin);
         login = view.findViewById(R.id.blissboxLogin);
 
+        fbCustomLogin = view.findViewById(R.id.customfbLogin);
+        fbCustomLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fbLogin.performClick();
+            }
+        });
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,8 +112,9 @@ public class FragmentLoginSignup extends Fragment {
                                 // Application code
                                 try {
                                     String name = object.getString("name");
+                                    String email = object.getString("email");
                                     Log.e("facebook name: ", name);
-                                    Toast.makeText(getContext(), "Name:" + name, Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getContext(), "Email:" + email, Toast.LENGTH_LONG).show();
 
                                 } catch (JSONException e) {
                                     e.printStackTrace();
