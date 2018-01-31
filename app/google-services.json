@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "413185456400",
+    "firebase_url": "https://blissboxpteltd.firebaseio.com",
+    "project_id": "blissboxpteltd",
+    "storage_bucket": "blissboxpteltd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413185456400:android:1df1a16fa3cdd312",
+        "android_client_info": {
+          "package_name": "asia.blissbox.blissboxpteltd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413185456400-deak5m7a4hab675488ibk0jc0mcb0j4j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "asia.blissbox.blissboxpteltd",
+            "certificate_hash": "68bbd716c2aa12336f66e801c65c24a262b3110b"
+          }
+        },
+        {
+          "client_id": "413185456400-kotfha0sb2r4j42q805m4nqmmv7a6l7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHQwvp1QUeu5JkH2JxDnRcNWcj5utWyzQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413185456400-kotfha0sb2r4j42q805m4nqmmv7a6l7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

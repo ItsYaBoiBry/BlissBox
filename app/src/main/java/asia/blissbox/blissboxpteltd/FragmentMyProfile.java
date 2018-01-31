@@ -22,7 +22,7 @@ import static android.content.Context.MODE_PRIVATE;
  */
 public class FragmentMyProfile extends Fragment {
     Button btnLogout;
-    TextView welcomeText, userEmail;
+    TextView welcomeText;
     SharedPreferences sharedPreferences;
 
 
@@ -42,11 +42,11 @@ public class FragmentMyProfile extends Fragment {
 
         btnLogout = view.findViewById(R.id.logout);
         welcomeText = view.findViewById(R.id.welcomeName);
-        userEmail = view.findViewById(R.id.userEmail);
+
 
         Log.e("name: ", name);
         welcomeText.setText("Welcome " + name + "!");
-        userEmail.setText(email);
+
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
