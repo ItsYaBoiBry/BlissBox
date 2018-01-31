@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.transition.Slide;
+import android.support.transition.TransitionInflater;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new FragmentHome();
                     fm = getSupportFragmentManager();
                     trans = fm.beginTransaction();
+                    trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                     trans.replace(R.id.fragment, fragment);
                     trans.commit();
 
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new FragmentExperiences();
                     fm = getSupportFragmentManager();
                     trans = fm.beginTransaction();
+                    trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                     trans.replace(R.id.fragment, fragment);
                     trans.commit();
 
@@ -47,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     fragment = new FragmentCart();
                     fm = getSupportFragmentManager();
                     trans = fm.beginTransaction();
+                    trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                     trans.replace(R.id.fragment, fragment);
                     trans.commit();
 
@@ -60,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new FragmentLoginSignup();
                         fm = getSupportFragmentManager();
                         trans = fm.beginTransaction();
+                        trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                         trans.replace(R.id.fragment, fragment);
                         trans.commit();
                         return true;
@@ -69,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new FragmentMyProfile();
                         fm = getSupportFragmentManager();
                         trans = fm.beginTransaction();
+                        trans.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                         trans.replace(R.id.fragment, fragment);
                         trans.commit();
                         return true;

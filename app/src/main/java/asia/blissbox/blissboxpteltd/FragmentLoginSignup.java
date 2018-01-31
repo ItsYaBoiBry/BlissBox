@@ -234,9 +234,12 @@ public class FragmentLoginSignup extends Fragment {
                     if (String.valueOf(role_id).equals("1")) {
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         Log.e("user's first name: ", getUser.getString("first_name"));
+                        editor.putString("userJson", getUser.toString());
+                        Log.e("userJSON String: ", getUser.toString()) ;
                         editor.putString("name", getUser.getString("first_name"));
                         editor.putString("email", getUser.getString("email"));
                         editor.putString("phone", getUser.getString("phone"));
+
                         editor.putString("postal_code", getUser.getString("postal_code"));
 
                         editor.putString("user", getUser.toString());
@@ -272,6 +275,10 @@ public class FragmentLoginSignup extends Fragment {
                         adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
+                                String url = "https://dashboard.blissbox.asia";
+                                Intent a = new Intent(Intent.ACTION_VIEW);
+                                a.setData(Uri.parse(url));
+                                startActivity(a);
                             }
                         });
                         AlertDialog alertDialog = adb.create();

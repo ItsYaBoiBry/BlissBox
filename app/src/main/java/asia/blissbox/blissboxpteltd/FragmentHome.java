@@ -168,8 +168,6 @@ public class FragmentHome extends Fragment {
             }
         });
 
-
-
         return view;
     }
 
@@ -177,6 +175,7 @@ public class FragmentHome extends Fragment {
     public void replaceFragment(Fragment someFragment) {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment, someFragment);
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         transaction.addToBackStack(null);
         transaction.commit();
     }
@@ -290,6 +289,7 @@ public class FragmentHome extends Fragment {
                     startActivity(intent);
                 }
             });
+
             buyBtn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -356,6 +356,7 @@ public class FragmentHome extends Fragment {
                     startActivity(intent);
                 }
             });
+
             buyBtn5.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
