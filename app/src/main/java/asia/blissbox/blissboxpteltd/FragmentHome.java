@@ -239,21 +239,21 @@ public class FragmentHome extends Fragment {
                     bocs.setPdf_url(box.getString("pdf_url"));
                     bocs.setReview(box.getInt("review"));
                     bocs.setDeleted_at(box.getString("deleted_at"));
-                    bocs.setCreated_at(box.getString("created_at"));
-                    bocs.setUpdated_at(box.getString("updated_at"));
-                    allBoxes.add(bocs);
-                    Log.e("allboxes length", String.valueOf(allBoxes.size()));
-                }
+            bocs.setCreated_at(box.getString("created_at"));
+            bocs.setUpdated_at(box.getString("updated_at"));
+            allBoxes.add(bocs);
+            Log.e("allboxes length", String.valueOf(allBoxes.size()));
+        }
 
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+    } catch (JSONException e) {
+        e.printStackTrace();
+    }
             Log.e("Looping", "loop Ended");
-            feature1 = allBoxes.get(0);
-            feature2 = allBoxes.get(1);
-            feature3 = allBoxes.get(2);
-            feature4 = allBoxes.get(3);
-            feature5 = allBoxes.get(5);
+    feature1 = allBoxes.get(0);
+    feature2 = allBoxes.get(1);
+    feature3 = allBoxes.get(2);
+    feature4 = allBoxes.get(3);
+    feature5 = allBoxes.get(5);
 
             featureTitle1.setText(feature1.getName());
             featureDesc1.setText(feature1.getDescription());
