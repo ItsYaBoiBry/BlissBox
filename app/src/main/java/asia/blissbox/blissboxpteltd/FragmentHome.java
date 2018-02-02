@@ -32,7 +32,7 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class FragmentHome extends Fragment {
-    LinearLayout featureBox1,featureBox2,featureBox3,featureBox4,featureBox5;
+    LinearLayout featureBox1, featureBox2, featureBox3, featureBox4, featureBox5;
     ImageButton btnGastro, btnStay, btnWellness, btnEnergize, btnMulti;
     TextView featureTitle1, featureTitle2, featureTitle3, featureTitle4, featureTitle5;
     ImageView ivFeature1, ivFeature2, ivFeature3, ivFeature4, ivFeature5;
@@ -43,7 +43,6 @@ public class FragmentHome extends Fragment {
     LinearLayout pbHome;
 
     private List<ObjectBoxes> allBoxes;
-
 
 
     public FragmentHome() {
@@ -107,14 +106,13 @@ public class FragmentHome extends Fragment {
         buyBtn5 = view.findViewById(R.id.buyNow5);
 
 
-
         btnGastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new FragmentViewProduct();
                 Bundle bundleObject = new Bundle();
-                bundleObject.putInt("universe_id",2);
-                bundleObject.putString("universe","Indulge");
+                bundleObject.putInt("universe_id", 2);
+                bundleObject.putString("universe", "Indulge");
                 fragment.setArguments(bundleObject);
                 replaceFragment(fragment);
             }
@@ -125,8 +123,8 @@ public class FragmentHome extends Fragment {
             public void onClick(View v) {
                 Fragment fragment = new FragmentViewProduct();
                 Bundle bundleObject = new Bundle();
-                bundleObject.putInt("universe_id",3);
-                bundleObject.putString("universe","Energize");
+                bundleObject.putInt("universe_id", 3);
+                bundleObject.putString("universe", "Energize");
                 fragment.setArguments(bundleObject);
                 replaceFragment(fragment);
             }
@@ -137,8 +135,8 @@ public class FragmentHome extends Fragment {
             public void onClick(View v) {
                 Fragment fragment = new FragmentViewProduct();
                 Bundle bundleObject = new Bundle();
-                bundleObject.putInt("universe_id",5);
-                bundleObject.putString("universe","Relax");
+                bundleObject.putInt("universe_id", 5);
+                bundleObject.putString("universe", "Relax");
                 fragment.setArguments(bundleObject);
                 replaceFragment(fragment);
             }
@@ -149,8 +147,8 @@ public class FragmentHome extends Fragment {
             public void onClick(View v) {
                 Fragment fragment = new FragmentViewProduct();
                 Bundle bundleObject = new Bundle();
-                bundleObject.putInt("universe_id",4);
-                bundleObject.putString("universe","Escape");
+                bundleObject.putInt("universe_id", 4);
+                bundleObject.putString("universe", "Escape");
                 fragment.setArguments(bundleObject);
                 replaceFragment(fragment);
             }
@@ -161,8 +159,8 @@ public class FragmentHome extends Fragment {
             public void onClick(View v) {
                 Fragment fragment = new FragmentViewProduct();
                 Bundle bundleObject = new Bundle();
-                bundleObject.putInt("universe_id",1);
-                bundleObject.putString("universe","Multitheme");
+                bundleObject.putInt("universe_id", 1);
+                bundleObject.putString("universe", "Multitheme");
                 fragment.setArguments(bundleObject);
                 replaceFragment(fragment);
             }
@@ -188,13 +186,13 @@ public class FragmentHome extends Fragment {
             OkHttpClient client = new OkHttpClient();
             com.squareup.okhttp.Request request =
                     new com.squareup.okhttp.Request.Builder()
-                    .url(urls[0])
-                    .header("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjI3MGY3NWFjOWU5ZTNhNTNhZGZjMmRkN2Q5NTlhMzc5NWNmZTQ3ZTA3OGY5MTI4NTYzZTZjMzliNzkyM2QxMGZiZDdkYzlmNWM0NWRlMWE1In0.eyJhdWQiOiI1IiwianRpIjoiMjcwZjc1YWM5ZTllM2E1M2FkZmMyZGQ3ZDk1OWEzNzk1Y2ZlNDdlMDc4ZjkxMjg1NjNlNmMzOWI3OTIzZDEwZmJkN2RjOWY1YzQ1ZGUxYTUiLCJpYXQiOjE1MTAyMTU2MzgsIm5iZiI6MTUxMDIxNTYzOCwiZXhwIjoxNTQxNzUxNjM4LCJzdWIiOiI3NiIsInNjb3BlcyI6W119.CXN2XeXEqOfrr4AcyAbb9cEL8lP5xOaL3woPQ3KzXkNFaSJpET0-sA1PJGjSERPcpXGU9SU_2drfllnHxGQmrL4PccUHQE8hTwAr8quQ6a5JAivuP2_n9X9gEx951Swy7XIFibFKR3lfLW19xhySbJgz3wLdhQDplfe4EyFZDkabOX37D5Mijms4DHFoY4BONsw3QvMfa2twoYLvYDUFvDhGTxJumvk9v_POR6PYNYsfetJ4O65IA-qonTT6bV1VBah78fun5Zv552aTvBfbcfzo1HgLeBkVXmsmaWc81QOuunardAugXtrW2uryDxVBb4jdgfurNQ8wby4xR6MtQK8rprFv2SlWmEQ7Yog8JBzB2uJbnOlR442Cfo7xG-WCqbFJqfMj3E9w67e-7R19mPlORSF8vSBcGbI_U6iSEgTjvY0EGDCxoYalL_S24iIVHWLadC8nTD8TcKHIe9mjUvYgClBN2dd8Rqy20TH3CwDHC-N03MIK8YvRm_icsodsM4wPbRJWK4NYibSIMrxekYdzrhp8N3JsoVLoh3hgW33aTi6YIVujwYbL4bdM5B8oLN0wEPdXV6lqVOsS9zAexSF4e5h4DtPZrPuMv8ybfbk0rHLmMV55EjaqbogRb4iJIEIYrzoPny44DFmf-uouhnvGrTWcVjaNSUZR7-clJOo")
-                    .build();
-                com.squareup.okhttp.Response response = null;
-                try {
-                    response = client.newCall(request).execute();
-                } catch (IOException e) {
+                            .url(urls[0])
+                            .header("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjI3MGY3NWFjOWU5ZTNhNTNhZGZjMmRkN2Q5NTlhMzc5NWNmZTQ3ZTA3OGY5MTI4NTYzZTZjMzliNzkyM2QxMGZiZDdkYzlmNWM0NWRlMWE1In0.eyJhdWQiOiI1IiwianRpIjoiMjcwZjc1YWM5ZTllM2E1M2FkZmMyZGQ3ZDk1OWEzNzk1Y2ZlNDdlMDc4ZjkxMjg1NjNlNmMzOWI3OTIzZDEwZmJkN2RjOWY1YzQ1ZGUxYTUiLCJpYXQiOjE1MTAyMTU2MzgsIm5iZiI6MTUxMDIxNTYzOCwiZXhwIjoxNTQxNzUxNjM4LCJzdWIiOiI3NiIsInNjb3BlcyI6W119.CXN2XeXEqOfrr4AcyAbb9cEL8lP5xOaL3woPQ3KzXkNFaSJpET0-sA1PJGjSERPcpXGU9SU_2drfllnHxGQmrL4PccUHQE8hTwAr8quQ6a5JAivuP2_n9X9gEx951Swy7XIFibFKR3lfLW19xhySbJgz3wLdhQDplfe4EyFZDkabOX37D5Mijms4DHFoY4BONsw3QvMfa2twoYLvYDUFvDhGTxJumvk9v_POR6PYNYsfetJ4O65IA-qonTT6bV1VBah78fun5Zv552aTvBfbcfzo1HgLeBkVXmsmaWc81QOuunardAugXtrW2uryDxVBb4jdgfurNQ8wby4xR6MtQK8rprFv2SlWmEQ7Yog8JBzB2uJbnOlR442Cfo7xG-WCqbFJqfMj3E9w67e-7R19mPlORSF8vSBcGbI_U6iSEgTjvY0EGDCxoYalL_S24iIVHWLadC8nTD8TcKHIe9mjUvYgClBN2dd8Rqy20TH3CwDHC-N03MIK8YvRm_icsodsM4wPbRJWK4NYibSIMrxekYdzrhp8N3JsoVLoh3hgW33aTi6YIVujwYbL4bdM5B8oLN0wEPdXV6lqVOsS9zAexSF4e5h4DtPZrPuMv8ybfbk0rHLmMV55EjaqbogRb4iJIEIYrzoPny44DFmf-uouhnvGrTWcVjaNSUZR7-clJOo")
+                            .build();
+            com.squareup.okhttp.Response response = null;
+            try {
+                response = client.newCall(request).execute();
+            } catch (IOException e) {
                 e.printStackTrace();
             }
             if (response.isSuccessful()) {
@@ -239,31 +237,31 @@ public class FragmentHome extends Fragment {
                     bocs.setPdf_url(box.getString("pdf_url"));
                     bocs.setReview(box.getInt("review"));
                     bocs.setDeleted_at(box.getString("deleted_at"));
-            bocs.setCreated_at(box.getString("created_at"));
-            bocs.setUpdated_at(box.getString("updated_at"));
-            allBoxes.add(bocs);
-            Log.e("allboxes length", String.valueOf(allBoxes.size()));
-        }
+                    bocs.setCreated_at(box.getString("created_at"));
+                    bocs.setUpdated_at(box.getString("updated_at"));
+                    allBoxes.add(bocs);
+                    Log.e("allboxes length", String.valueOf(allBoxes.size()));
+                }
 
-    } catch (JSONException e) {
-        e.printStackTrace();
-    }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
             Log.e("Looping", "loop Ended");
-    feature1 = allBoxes.get(0);
-    feature2 = allBoxes.get(1);
-    feature3 = allBoxes.get(2);
-    feature4 = allBoxes.get(3);
-    feature5 = allBoxes.get(5);
+            feature1 = allBoxes.get(0);
+            feature2 = allBoxes.get(1);
+            feature3 = allBoxes.get(2);
+            feature4 = allBoxes.get(3);
+            feature5 = allBoxes.get(5);
 
             featureTitle1.setText(feature1.getName());
             featureDesc1.setText(feature1.getDescription());
             featurePrice1.setText("SGD " + String.valueOf(feature1.getPrice()) + "0");
-            Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/"+feature1.getThumbnail()).into(ivFeature1);
+            Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/" + feature1.getThumbnail()).into(ivFeature1);
             featureBox1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getContext(), ActivityViewProduct.class);
-                    intent.putExtra("gift",feature1);
+                    intent.putExtra("gift", feature1);
                     startActivity(intent);
                 }
             });
@@ -280,12 +278,12 @@ public class FragmentHome extends Fragment {
             featureTitle2.setText(feature2.getName());
             featureDesc2.setText(feature2.getDescription());
             featurePrice2.setText("SGD " + String.valueOf(feature2.getPrice()) + "0");
-            Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/"+feature2.getThumbnail()).into(ivFeature2);
+            Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/" + feature2.getThumbnail()).into(ivFeature2);
             featureBox2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getContext(), ActivityViewProduct.class);
-                    intent.putExtra("gift",feature2);
+                    intent.putExtra("gift", feature2);
                     startActivity(intent);
                 }
             });
@@ -303,12 +301,12 @@ public class FragmentHome extends Fragment {
             featureTitle3.setText(feature3.getName());
             featureDesc3.setText(feature3.getDescription());
             featurePrice3.setText("SGD " + String.valueOf(feature3.getPrice()) + "0");
-            Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/"+feature3.getThumbnail()).into(ivFeature3);
+            Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/" + feature3.getThumbnail()).into(ivFeature3);
             featureBox3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getContext(), ActivityViewProduct.class);
-                    intent.putExtra("gift",feature3);
+                    intent.putExtra("gift", feature3);
                     startActivity(intent);
                 }
             });
@@ -325,12 +323,12 @@ public class FragmentHome extends Fragment {
             featureTitle4.setText(feature4.getName());
             featureDesc4.setText(feature4.getDescription());
             featurePrice4.setText("SGD " + String.valueOf(feature4.getPrice()) + "0");
-            Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/"+feature4.getThumbnail()).into(ivFeature4);
+            Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/" + feature4.getThumbnail()).into(ivFeature4);
             featureBox4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getContext(), ActivityViewProduct.class);
-                    intent.putExtra("gift",feature4);
+                    intent.putExtra("gift", feature4);
                     startActivity(intent);
                 }
             });
@@ -347,12 +345,12 @@ public class FragmentHome extends Fragment {
             featureTitle5.setText(feature5.getName());
             featureDesc5.setText(feature5.getDescription());
             featurePrice5.setText("SGD " + String.valueOf(feature5.getPrice()) + "0");
-            Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/"+feature5.getThumbnail()).into(ivFeature5);
+            Picasso.with(getContext()).load("https://dev.blissbox.asia/storage/giftboxes/" + feature5.getThumbnail()).into(ivFeature5);
             featureBox5.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getContext(), ActivityViewProduct.class);
-                    intent.putExtra("gift",feature5);
+                    intent.putExtra("gift", feature5);
                     startActivity(intent);
                 }
             });

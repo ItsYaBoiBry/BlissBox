@@ -271,7 +271,7 @@ public class FragmentLoginSignup extends Fragment {
                     } else if (String.valueOf(role_id).equals("3")) {
                         AlertDialog.Builder adb = new AlertDialog.Builder(getContext());
                         adb.setTitle("Hi " + getUser.getString("first_name"));
-                        adb.setMessage("Go fuck yourself");
+                        adb.setMessage("Use the site to login to dashbboard");
                         adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
